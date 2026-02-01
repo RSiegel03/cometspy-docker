@@ -5,3 +5,5 @@ gurobi.lic
 .env.local
 
 *.tar.gz
+*.tar
+*.zip
