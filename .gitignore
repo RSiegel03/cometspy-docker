@@ -4,4 +4,4 @@ gurobi.lic
 .env
 .env.local
 
-
+*.tar.gz
