@@ -1,0 +1,28 @@
+{
+    "name": "COMETSpy Development Environment",
+    "image": "cometspy:latest",
+    
+    "containerEnv": {
+        "GUROBI_HOME": "/opt/gurobi/linux64",
+        "GUROBI_COMETS_HOME": "/opt/gurobi/linux64",
+        "GRB_LICENSE_FILE": "/opt/gurobi_home/gurobi.lic",
+        "COMETS_HOME": "/opt/COMETS_2.11.0",
+        "LD_LIBRARY_PATH": "/opt/gurobi/linux64/lib"
+    },
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/bin/python3"
+            }
+        }
+    },
+    
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "remoteUser": "root"
+}
