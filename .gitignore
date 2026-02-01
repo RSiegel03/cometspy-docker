@@ -7,3 +7,5 @@ gurobi.lic
 *.tar.gz
 *.tar
 *.zip
+*.tar.gz
+*.lic
