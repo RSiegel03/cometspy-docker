@@ -1,13 +1,19 @@
 {
     "name": "COMETSpy Development Environment",
-    "image": "cometspy:latest",
+    "build": {
+        "context": "..",
+        "dockerfile": "../Dockerfile"
+    },
     
     "containerEnv": {
+        "JAVA_HOME": "/usr/lib/jvm/java-11-openjdk-amd64",
         "GUROBI_HOME": "/opt/gurobi/linux64",
         "GUROBI_COMETS_HOME": "/opt/gurobi/linux64",
         "GRB_LICENSE_FILE": "/opt/gurobi_home/gurobi.lic",
         "COMETS_HOME": "/opt/COMETS_2.11.0",
-        "LD_LIBRARY_PATH": "/opt/gurobi/linux64/lib"
+        "LD_LIBRARY_PATH": "/opt/gurobi/linux64/lib",
+        "CLASSPATH": "/opt/COMETS_2.11.0/lib/gurobi.jar:/opt/COMETS_2.11.0/bin/comets.jar",
+        "PATH": "/opt/COMETS_2.11.0/bin:/opt/gurobi/linux64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
     },
     
     "customizations": {
