@@ -30,5 +30,8 @@
     
     "workspaceFolder": "/workspace",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "mounts": [
+      "source=/home/rseag/UVM/M3_Lab/,target=/M3_lab/,type=bind"
+    ],
     "remoteUser": "root"
 }
